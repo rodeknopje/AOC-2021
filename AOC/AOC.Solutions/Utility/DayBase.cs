@@ -18,8 +18,7 @@ public abstract class DayBase
     public abstract int Solve_1();
     public abstract int Solve_2();
     
-    protected string GetInput() => _adventClient.FetchInput(Year, Day);
-
+    protected string GetInputRaw() => _adventClient.FetchInput(Year, Day);
     protected List<string> GetInputLines() => _adventClient.FetchInput(Year, Day).Split('\n').ToList();
-    protected List<int> GetInputAsLinesAsNumbers() => _adventClient.FetchInput(Year, Day).Split('\n').Select(x=> Convert.ToInt32(x)).ToList();
+    protected List<int> GetInputNumbers() => _adventClient.FetchInput(Year, Day).Split('\n').Select(x=> Convert.ToInt32(x)).ToList();
 }

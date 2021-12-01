@@ -6,7 +6,7 @@ public class AdventClient
 {
     private readonly HttpClient _client;
 
-    private const string InputDir = $"../../../inputs/";
+    private const string InputDir = "../../../inputs/";
 
     private const string SessionFile = "../../../../session.txt";
 

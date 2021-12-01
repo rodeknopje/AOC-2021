@@ -1,17 +1,15 @@
-using AOC.Solutions.Utility;
-
 namespace AOC.Solutions;
 
 public class D01 : DayBase
 {
     protected override int Day => 1;
     
-    public override int Solve_1() => GetIncreasedMeasurement(1);
-    public override int Solve_2() => GetIncreasedMeasurement(3);
+    public override int Solve_1() => GetIncreaseCount(1);
+    public override int Solve_2() => GetIncreaseCount(3);
     
-    private int GetIncreasedMeasurement(int lookBack)
+    private int GetIncreaseCount(int lookBack)
     {
-        var measurements = GetInputAsLinesAsNumbers();
+        var measurements = GetInputNumbers();
         var i = lookBack;
         return measurements.Skip(lookBack).Count(x => x > measurements[i++-lookBack]);
     }
