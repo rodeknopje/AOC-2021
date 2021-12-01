@@ -21,4 +21,5 @@ public abstract class DayBase
     protected string GetInput() => _adventClient.FetchInput(Year, Day);
 
     protected List<string> GetInputLines() => _adventClient.FetchInput(Year, Day).Split('\n').ToList();
+    protected List<int> GetInputAsLinesAsNumbers() => _adventClient.FetchInput(Year, Day).Split('\n').Select(x=> Convert.ToInt32(x)).ToList();
 }
