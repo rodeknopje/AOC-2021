@@ -46,10 +46,8 @@ public class D02 : DayBase
                     aim += amount;
                     break;
                 case 'f':
-                {
                     x += amount;
                     y += amount * aim;
-                }
                     break;
             }
         }

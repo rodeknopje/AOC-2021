@@ -1,6 +1,6 @@
 ﻿using AOC.Solutions;
 
-var day = new D02();
+var day = new D03();
 
-Console.WriteLine(day.Solve_1());
-Console.WriteLine(day.Solve_2());
+Console.WriteLine($"1: {day.Solve_1()}");
+Console.WriteLine($"2: {day.Solve_2()}");
