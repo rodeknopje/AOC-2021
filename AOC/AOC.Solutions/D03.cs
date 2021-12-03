@@ -10,20 +10,18 @@ public class D03 : DayBase
     {
         var input = GetInputLines();
 
-        string ga = "", ep = "";
+        var bits = string.Empty;
 
         for (var i = 0; i < input.First().Length; i++)
         {
-            var avg = Math.Round(input.Select(line => int.Parse(line[i]+"")).Average());
-            
-            ga += avg;
-            ep += Math.Abs(--avg);
+            bits += Math.Round(input.Select(line => int.Parse(line[i] + "")).Average());
         }
 
-        return Convert.ToInt16(ga, 2) * 
-               Convert.ToInt16(ep, 2);
+        var value = Convert.ToInt16(bits, 2);
+        
+        return (~value & 4095) * value;
     }
-    
+
     public override int Solve_2()
     {
         var oxy = Filter((_0s, _1s) => _0s > _1s ? '0' : '1');
@@ -39,12 +37,11 @@ public class D03 : DayBase
         for (var i = 0; input.Count > 1; i++)
         {
             var _0s = input.Count(line => line[i] == '0');
-            var _1s = input.Count(line => line[i] == '1');
-            
+            var _1s = input.Count - _0s;
+
             input = input.Where(x => x[i] == condition(_0s, _1s)).ToList();
         }
 
         return Convert.ToInt16(input.First(), 2);
     }
 }
-
