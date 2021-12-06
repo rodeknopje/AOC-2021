@@ -4,7 +4,7 @@ public class D02 : DayBase
 {
     protected override int Day => 2;
 
-    public override int Solve_1()
+    public override long Solve_1()
     {
         int x = 0, y = 0;
 
@@ -29,7 +29,7 @@ public class D02 : DayBase
         return x * y;
     }
 
-    public override int Solve_2()
+    public override long Solve_2()
     {
         int x = 0, y = 0, aim = 0;
 

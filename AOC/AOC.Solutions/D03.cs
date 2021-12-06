@@ -6,7 +6,7 @@ public class D03 : DayBase
 {
     protected override int Day => 3;
 
-    public override int Solve_1()
+    public override long Solve_1()
     {
         var input = GetInputLines();
 
@@ -22,7 +22,7 @@ public class D03 : DayBase
         return (~value & 4095) * value;
     }
 
-    public override int Solve_2()
+    public override long Solve_2()
     {
         var oxy = Filter((_0s, _1s) => _0s > _1s ? '0' : '1');
         var co2 = Filter((_0s, _1s) => _1s < _0s ? '1' : '0');

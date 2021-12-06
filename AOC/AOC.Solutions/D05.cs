@@ -19,7 +19,7 @@ public class D05 : DayBase
         _nodes = new Dictionary<(int y, int x), int>();
     }
 
-    public override int Solve_1()
+    public override long Solve_1()
     {
         foreach (var (curr, dest) in _input)
         {
@@ -34,7 +34,7 @@ public class D05 : DayBase
         return _nodes.Values.Count(x => x > 1);
     }
 
-    public override int Solve_2()
+    public override long Solve_2()
     {
         foreach (var (curr, dest) in _input)
         {

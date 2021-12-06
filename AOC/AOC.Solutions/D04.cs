@@ -44,7 +44,7 @@ public class D04 : DayBase
     }
 
 
-    public override int Solve_1()
+    public override long Solve_1()
     {
         foreach (var lucky in _drawOrder)
         foreach (var pos in _numberCoords[lucky])
@@ -60,7 +60,7 @@ public class D04 : DayBase
         return -1;
     }
 
-    public override int Solve_2()
+    public override long Solve_2()
     {
         var solvedBoards = new List<int>();
 

@@ -15,8 +15,8 @@ public abstract class DayBase
         _adventClient = new AdventClient();
     }
     
-    public abstract int Solve_1();
-    public abstract int Solve_2();
+    public abstract long Solve_1();
+    public abstract long Solve_2();
     
     protected string GetInputRaw() => _adventClient.FetchInput(Year, Day);
     protected List<string> GetInputLines() => _adventClient.FetchInput(Year, Day).Split('\n').ToList();
