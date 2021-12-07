@@ -51,8 +51,7 @@ public class D02 : DayBase
                     break;
             }
         }
-
-
+        
         return x * y;
     }
 }
