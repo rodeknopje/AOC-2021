@@ -1,5 +1,3 @@
-using System.Diagnostics;
-
 namespace AOC.Solutions;
 
 public class D07 : DayBase
