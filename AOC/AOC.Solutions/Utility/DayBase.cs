@@ -21,4 +21,34 @@ public abstract class DayBase
     protected string GetInputRaw() => _adventClient.FetchInput(Year, Day);
     protected List<string> GetInputLines() => _adventClient.FetchInput(Year, Day).Split('\n').ToList();
     protected List<int> GetInputNumbers() => _adventClient.FetchInput(Year, Day).Split('\n').Select(x=> Convert.ToInt32(x)).ToList();
+
+    protected int[,] GetInputIntMap()
+    {
+        var input = _adventClient.FetchInput(Year, Day).Split('\n');
+
+        var map = new int[input.Length,input.First().Length];
+
+        for (var y = 0; y < map.GetLength(0); y++)
+        for (var x = 0; x < map.GetLength(1); x++)
+        {
+            map[y, x] = int.Parse(input[y][x].ToString());
+        }
+
+        return map;
+    }
+    
+    protected char[,] GetInputCharMap()
+    {
+        var input = _adventClient.FetchInput(Year, Day).Split('\n');
+
+        var map = new char[input.Length,input.First().Length];
+
+        for (var y = 0; y < map.GetLength(0); y++)
+        for (var x = 0; x < map.GetLength(1); x++)
+        {
+            map[y, x] = input[y][x];
+        }
+
+        return map;
+    }
 }
