@@ -5,6 +5,7 @@ public class D11 : DayBase
     protected override int Day => 11;
 
     private readonly int[,] _map;
+    
     private List<(int, int)> _flashed;
 
     public D11()
@@ -43,7 +44,6 @@ public class D11 : DayBase
             {
                 sum += TryFlash((y, x));
             }
-
             if (sum == _map.Length)
             {
                 return i;
